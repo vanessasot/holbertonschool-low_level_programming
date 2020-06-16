@@ -12,13 +12,11 @@
  */
 void print_alphabet(void)
 {
-	int school[26] = {97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122};
 	int i;
 
-	for (i = 0; i <= 26-1; i++)
+	for (i == 97; i <= 122 - 1; i++)
 	{
-		_putchar(school[i]);
+		_putchar(i);
 	}
 	_putchar('\n');
-	return;
 }
