@@ -8,18 +8,20 @@
  */
 int _abs(int n)
 {
-	if (n < 0)
+	if (n >= 0)
 	{
-		n = (((n * n) / n) * -1);
+		n = (n);
 
 		return (n);
 	}
-	else if (n > 0)
+	else if (n < 0)
 	{
-		n = (((n * n) / n) * 1);
+		n = (n * -1);
 
 		return (n);
 	}
 	else
+	{
 		return (0);
+	}
 }
