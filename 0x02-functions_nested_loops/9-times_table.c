@@ -12,7 +12,6 @@ void times_table(void)
 	int x;
 	int y;
 
-	x = 0;
 	i = 0;
 
 	while (i < 10)
