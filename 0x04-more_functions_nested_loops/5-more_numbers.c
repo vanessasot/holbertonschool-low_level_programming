@@ -21,14 +21,14 @@ void more_numbers(void)
 
 			if (op > 9)
 			{
-				putchar(y + '0');
-				putchar(z + '0');
+				_putchar(y + '0');
+				_putchar(z + '0');
 			}
 			else
 			{
-				putchar(op + '0');
+				_putchar(op + '0');
 			}
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
