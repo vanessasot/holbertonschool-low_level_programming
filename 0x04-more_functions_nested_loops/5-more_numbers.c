@@ -7,7 +7,7 @@
 
 void more_numbers(void)
 {
-	int n, n1, n2, op, y, z;
+	int n, n1, n2, op, last_dig;
 
 	n2 = 1;
 
@@ -16,18 +16,12 @@ void more_numbers(void)
 		for (n1 = 0; n1 <= 14; n1++)
 		{
 			op = n1 * n2;
-			y = op / 10;
-			z = op % 10;
+			last_dig = op % 10;
 
 			if (op > 9)
-			{
-				_putchar(y + '0');
-				_putchar(z + '0');
-			}
-			else
-			{
-				_putchar(op + '0');
-			}
+				_putchar(49);
+
+			_putchar(last_dig + '0');
 		}
 		_putchar('\n');
 	}
