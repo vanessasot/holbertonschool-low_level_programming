@@ -17,30 +17,27 @@ void times_table(void)
 			z = x % 10;
 			if (x > 9)
 			{
-				if (i > 0 && i > 9)
-				{
-					_putchar(' ');
-				}
 				_putchar(y + '0');
 				_putchar(z + '0');
 			}
 			else
 			{
-				_putchar(z + '0');
-			}
-			if (j == 9)
-			{
-				_putchar('\n');
-			}
-			else
-			{
-				if (j < 10)
+				if (j >= 1)
 				{
-					_putchar(',');
 					_putchar(' ');
-					_putchar(' ');
+					_putchar(z + '0');
+				}
+				else
+				{
+					_putchar(z + '0');
 				}
 			}
+			if (j != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
+		_putchar('\n');
 	}
 }
