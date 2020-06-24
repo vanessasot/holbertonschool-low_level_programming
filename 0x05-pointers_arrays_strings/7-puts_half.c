@@ -7,17 +7,25 @@
 
 void puts_half(char *str)
 {
-	int cont;
-	int n;
+	int n1 = 0;
+	int n2 = 0;
 
-	cont = 0;
-	while (str[cont] != '\0')
+	while (str[n1] != '\0')
 	{
-		if (cont % 2 == 0)
-		{
-			_putchar(str[cont]);
-		}
-		cont++;
+		n1++;
+	}
+	if (n1 % 2 == 0)
+	{
+		n2 = n1 / 2;
+	}
+	else
+	{
+		n2 = (n1 / 2) + 1;
+	}
+	while (n1 >  n2)
+	{
+		_putchar(str[n2]);
+		n2++;
 	}
 	_putchar('\n');
 }
