@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strchr - Gets the length of a prefix substring.
+ * _strspn - Gets the length of a prefix substring.
  * @s: Pointer to array.
  * @accept: Pointer to array.
  *
