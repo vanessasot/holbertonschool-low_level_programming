@@ -10,18 +10,20 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
-
-	while (haystack[i] != '\0')
+	while (*haystack)
 	{
-		while (*haystack != *needle)
+		char *pointer1 = needle;
+		char *pointer2 = haystack;
+
+		for (; *pointer1 == *pointer2 && *pointer1; pointer1++, pointer2++)
 		{
-			if (!*haystack++)
-			{
-				return (NULL);
-			}
 		}
-		i++;
+		if (*pointer1 == '\0')
+		{
+			return (haystack);
+		}
+		haystack++;
 	}
-	return ((char *)haystack);
+
+	return (NULL);
 }
