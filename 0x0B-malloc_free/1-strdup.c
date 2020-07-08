@@ -13,6 +13,8 @@ char *_strdup(char *str)
 	unsigned int i;
 	unsigned int j;
 
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -29,5 +31,6 @@ char *_strdup(char *str)
 		cadena[j] = str[j];
 		j++;
 	}
+	cadena[j] = '\0';
 	return (cadena);
 }
