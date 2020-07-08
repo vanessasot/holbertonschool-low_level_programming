@@ -11,16 +11,21 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *cadena;
-	unsigned int ss1;
-	unsigned int ss2;
-	unsigned int s3;
 	unsigned int i;
+	unsigned int a;
+	unsigned int b;
+	unsigned int ab;
 
-	ss1 = strlen(s1);
-	ss2 = strlen(s2);
-	s3 = ss1 + ss2 + 1;
-
-	cadena = (char *) malloc(s3 * sizeof(char));
+	a = 0;
+	while (s1[a] != '\0')
+		a++;
+	b = 0;
+	while (s2[b] != '\0')
+		b++;
+	ab = a + b;
+	cadena = (char *) malloc((ab + 1) * sizeof(char));
+	if (cadena == NULL)
+		return (NULL);
 	i = 0;
 	while (*s1 != '\0')
 	{
