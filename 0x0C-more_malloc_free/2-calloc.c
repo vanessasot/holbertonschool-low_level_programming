@@ -5,6 +5,7 @@
  * @nmemb: Size of space to allocate.
  * @size: Size of bytes of the type of variable.
  *
+ * Return: Pointer to the allocated memory.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -17,7 +18,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	pointer = malloc(nmemb * size);
 	if (pointer == NULL)
+	{
 		return (NULL);
+	}
 	return (pointer);
 }
 
