@@ -41,6 +41,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		d++;
 	}
 	cadena[c + d] = '\0';
-	return (cadena);	
+	return (cadena);
 }
 
