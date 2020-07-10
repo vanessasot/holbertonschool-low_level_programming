@@ -12,6 +12,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *pointer;
 	unsigned int i;
+	unsigned int tamano;
+
+	tamano = nmemb * size;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -20,7 +23,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	for (i = 0; pointer[i] != '\0'; i++)
+	for (i = 0; i <= tamano; i++)
 	{
 		pointer[i] = 0;
 	}
