@@ -15,15 +15,12 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	for (i = 0; i <= max; i++)
-	{
-	}
-	pointer = malloc(i * sizeof(int));
+	pointer = malloc((max - min + 1) * sizeof(int));
 	if (pointer == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i <= max; i++)
+	for (i = 0; i < max - min + 1; i++)
 	{
 		pointer[i] = i;
 	}
