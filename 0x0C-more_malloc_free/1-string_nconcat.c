@@ -8,11 +8,10 @@
  *
  * Return: The value in the new pointer.
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *cadena;
-	unsigned int i, a, b, ab;
+	unsigned int i, a, b;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -20,18 +19,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	for (a = 0; s1[a] != '\0'; a++)
 	for (b = 0; s2[b] != '\0'; b++)
-	ab = a + b;
-	cadena = (char *) malloc((ab + 1) * sizeof(char));
+	cadena = malloc((a + n + 1) * sizeof(char));
 	if (cadena == NULL)
 		return (NULL);
-	if (n <= b)
+	if (n >= b)
 	{
-		i = 0;
-		while (*s2 != '\0')
+		for (i = 0; *s2 != '\0'; i++)
 		{
 			cadena[i] = *s2;
 			s2++;
-			i++;
 		}
 		cadena[i] = '\0';
 		return (cadena);
@@ -43,12 +39,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1++;
 		i++;
 	}
-	while (*s2 != '\0')
-	{
-		cadena[i] = *s2;
-		s2++;
-		i++;
-	}
+		while (*s2 != '\0')
+		{	
+			cadena[i] = *s2;
+			s2++;
+			i++;
+			a++;
+		}
 	cadena[i] = '\0';
 	return (cadena);
 }
