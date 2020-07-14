@@ -1,6 +1,12 @@
 #ifndef DOG
 #define DOG
 
+/* Standard Libraries*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * struct dog - Data of a dog.
  * @name: First member
@@ -16,5 +22,10 @@ struct dog
 	float age;
 	char *owner;
 };
+
+/* Prototypes */
+
+int _putchar(char c);
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif /* DOG */
