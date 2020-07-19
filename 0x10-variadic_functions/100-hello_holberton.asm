@@ -12,9 +12,9 @@ section .data
 	message_len equ $-message
 
 section .text
-	global _start
+	global main
 
-_start:
+main:
 	mov rax, sys_write
 	mov rdi, stdout
 	mov rsi, message
