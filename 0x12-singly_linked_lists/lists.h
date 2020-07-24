@@ -29,5 +29,6 @@ typedef struct list_s
 
 int _putchar(char c);
 size_t list_len(const list_t *h);
-void first(void);
+void first(void) __attribute__ ((constructor));
+
 #endif /* LISTS */
