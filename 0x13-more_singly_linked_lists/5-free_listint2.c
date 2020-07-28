@@ -9,7 +9,6 @@
 
 void free_listint2(listint_t **head)
 {
-	size_t len;
 	listint_t *aux;
 	listint_t *aux2;
 
@@ -18,7 +17,7 @@ void free_listint2(listint_t **head)
 
 	aux = *head;
 
-	for (len = 0; aux != NULL; len++)
+	while (aux != NULL)
 	{
 		aux2 = aux->next;
 		free(aux);
