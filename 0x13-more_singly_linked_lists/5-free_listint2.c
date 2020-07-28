@@ -13,6 +13,9 @@ void free_listint2(listint_t **head)
 	listint_t *aux;
 	listint_t *aux2;
 
+	if (head == NULL)
+		return;
+
 	aux = *head;
 
 	for (len = 0; aux != NULL; len++)
