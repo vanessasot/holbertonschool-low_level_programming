@@ -30,6 +30,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		aux = aux->next;
 		counter++;
 	}
+	if (aux == NULL || aux->next == NULL)
+		return (-1);
 	aux2 = aux->next->next;
 	free(aux->next);
 	aux->next = aux2;
