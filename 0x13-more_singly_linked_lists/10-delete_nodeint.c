@@ -22,6 +22,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	while (counter < index && aux != NULL)
 	{
 		aux = aux->next;
+		counter++;
 	}
 	aux2 = aux->next->next;
 	free(aux->next);
