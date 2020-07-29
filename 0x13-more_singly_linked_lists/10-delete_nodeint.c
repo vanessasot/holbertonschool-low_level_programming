@@ -19,6 +19,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	aux = *head;
 
+	if (index == 0)
+	{
+		*head = aux->next;
+		free(aux);
+		return (1);
+	}
 	while (counter < index && aux != NULL)
 	{
 		aux = aux->next;
