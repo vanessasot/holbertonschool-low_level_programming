@@ -2,9 +2,9 @@
 
 /**
  * print_binary - Converts a binary number to an unsigned int.
- * @b: Binary number
+ * @n: Binary number
  *
- * Return: Address of the new node.
+ * Return: Nothing.
  */
 
 void print_binary(unsigned long int n)
@@ -22,5 +22,5 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 		else
 			_putchar('0');
-	} 
+	}
 }
